@@ -12,20 +12,26 @@ interface Props{
 
 const estilos: Record<string, React.CSSProperties> ={
     tabla:{
-        borderColor: "gray",
+        borderColor: "#000000",
         borderWidth: "3px",
         borderStyle: "solid",
         textAlign: "center",
+        fontFamily: "math",
+        borderSpacing: 0,
     },
     encabezado:{
         backgroundColor: "gray",
-        color: "white"
+        color: "white",
+        borderCollapse: "collapse",
+        border: "3px solid white",
+        borderBottom: "1"
+
     },
     celda:{
         padding: "15px",
         fontSize: "15px",
         fontWeight: "bold",
-        border: "1px solid gray",
+        border: "2px solid #000000",
         whiteSpace: "pre-wrap",
     }
     }
@@ -42,7 +48,7 @@ export function ListaPaises({datoNombre, datoTitulo, datosPaises}: Props){
         <table style={estilos.tabla}>
             <thead style={estilos.encabezado}>
                 <tr>
-                    <th style={estilos.celda}>Nombre</th>
+                   <th style={estilos.celda}>Nombre</th>
                     <th style={estilos.celda}>Capital</th>
                     <th style={estilos.celda}>Moneda</th>
                     <th style={estilos.celda}>Cuidades</th>
@@ -68,7 +74,6 @@ export function ListaPaises({datoNombre, datoTitulo, datosPaises}: Props){
                                 <td style={estilos.celda}>{p.datosEconomicos.ingresoPerCapita}</td>
                                 <td style={estilos.celda}>{p.datosEconomicos.gini}</td>
                                 <td style={estilos.celda}>{p.datosEconomicos.pib}</td>
-                                <td></td>
                             </tr>
                         )
                     })
@@ -79,4 +84,5 @@ export function ListaPaises({datoNombre, datoTitulo, datosPaises}: Props){
 
     </>
 )}
+
 
