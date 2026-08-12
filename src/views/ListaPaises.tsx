@@ -12,13 +12,21 @@ interface Props{
 
 const estilos: Record<string, React.CSSProperties> ={
     tabla:{
-        borderColor: "blue",
+        borderColor: "gray",
         borderWidth: "3px",
         borderStyle: "solid",
+        textAlign: "center",
     },
     encabezado:{
-        backgroundColor: "blue",
+        backgroundColor: "gray",
         color: "white"
+    },
+    celda:{
+        padding: "15px",
+        fontSize: "15px",
+        fontWeight: "bold",
+        border: "1px solid gray",
+        whiteSpace: "pre-wrap",
     }
     }
 
@@ -34,15 +42,15 @@ export function ListaPaises({datoNombre, datoTitulo, datosPaises}: Props){
         <table style={estilos.tabla}>
             <thead style={estilos.encabezado}>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Capital</th>
-                    <th>Moneda</th>
-                    <th>Cuidades</th>
-                    <th>Densidad Población</th>
-                    <th>Población</th>
-                    <th>Ingreso Per Capita</th>
-                    <th>Gini</th>
-                    <th>PIB</th>
+                    <th style={estilos.celda}>Nombre</th>
+                    <th style={estilos.celda}>Capital</th>
+                    <th style={estilos.celda}>Moneda</th>
+                    <th style={estilos.celda}>Cuidades</th>
+                    <th style={estilos.celda}>Densidad Población</th>
+                    <th style={estilos.celda}>Población</th>
+                    <th style={estilos.celda}>Ingreso Per Capita</th>
+                    <th style={estilos.celda}>Gini</th>
+                    <th style={estilos.celda}>PIB</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,15 +59,15 @@ export function ListaPaises({datoNombre, datoTitulo, datosPaises}: Props){
                     datosPaises.map(function(p: pais){
                         return (
                             <tr>
-                                <td>{p.nombre}</td>
-                                <td>{p.capital}</td>
-                                <td>{p.moneda}</td>
-                                <td>{p.ciudades}</td>
-                                <td>{p.datosDemograficos.densidadPoblacion}</td>
-                                <td>{p.datosDemograficos.poblacion}</td>
-                                <td>{p.datosEconomicos.ingresoPerCapita}</td>
-                                <td>{p.datosEconomicos.gini}</td>
-                                <td>{p.datosEconomicos.pib}</td>
+                                <td style={estilos.celda}>{p.nombre}</td>
+                                <td style={estilos.celda}>{p.capital}</td>
+                                <td style={estilos.celda}>{p.moneda}</td>
+                                <td style={estilos.celda}>{p.ciudades.join(",   ")}</td>
+                                <td style={estilos.celda}>{p.datosDemograficos.densidadPoblacion}</td>
+                                <td style={estilos.celda}>{p.datosDemograficos.poblacion}</td>
+                                <td style={estilos.celda}>{p.datosEconomicos.ingresoPerCapita}</td>
+                                <td style={estilos.celda}>{p.datosEconomicos.gini}</td>
+                                <td style={estilos.celda}>{p.datosEconomicos.pib}</td>
                                 <td></td>
                             </tr>
                         )

@@ -14,14 +14,14 @@ const Paises: pais[] = [
     ],
 
     datosDemograficos:{
-        poblacion:56489800, 
-        densidadPoblacion:432
+        poblacion:69226000, 
+        densidadPoblacion:283
     },
     
     datosEconomicos:{
-        ingresoPerCapita:"£34690",
-        gini: 0.35,
-        pib: "£1961238"
+        ingresoPerCapita:"57.602 USD",
+        gini: 32.4,
+        pib: "4.00B USD"
     }
 },
 {
@@ -34,14 +34,14 @@ const Paises: pais[] = [
         "Madrid"
 ],
     datosDemograficos:{
-        poblacion:49687120,
-        densidadPoblacion:98.2
+        poblacion:48800000,
+        densidadPoblacion:97
     },
 
     datosEconomicos:{
-        ingresoPerCapita:"59190USD",
-        gini: 30.8,
-        pib: "2.04B USD"
+        ingresoPerCapita:"38.627 USD",
+        gini: 33.0,
+        pib: "1.89B USD"
     }
 },
 {
@@ -54,14 +54,14 @@ const Paises: pais[] = [
         "La plata"
 ],
     datosDemograficos:{
-        poblacion:46735004,
-        densidadPoblacion:16.81
+        poblacion:45696159,
+        densidadPoblacion:17
     },
 
     datosEconomicos:{
-        ingresoPerCapita:"14357 USD",
-        gini: 0.424,
-        pib: "688380M USD"
+        ingresoPerCapita:"14.898 USD",
+        gini:42.4,
+        pib: "0.64B USD"
     }
 },
 {
@@ -74,14 +74,14 @@ const Paises: pais[] = [
         "Natal"
 ],
     datosDemograficos:{
-        poblacion:213562666,
-        densidadPoblacion:23.8
+        poblacion:212000000,
+        densidadPoblacion:25
     },
 
     datosEconomicos:{
-        ingresoPerCapita:"12313 USD",
-        gini:48.9,
-        pib: "2.64B USD"
+        ingresoPerCapita:"10.713 USD",
+        gini:50.3,
+        pib: "2.28B USD"
     }
 }
 
